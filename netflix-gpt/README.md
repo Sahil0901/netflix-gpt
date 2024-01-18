@@ -1,4 +1,5 @@
 # Netflix-gpt
+
 - Create react-app
 - Configured tailwindcss
 - Header
@@ -26,10 +27,20 @@
 - Fetch Data for movie trailer
 - Update store with movie trailer data
 - Embedded the youtube trailer movie to our app
-- Used tailwind to make it look awesome. 
+- Used tailwind to make it look awesome.
+- Created Popular Movies, Upcoming Movies scrollable components.
+- Updated our store with upcoming and popular movies
+- Started the GPT search engine integration
+- Created Gptearchengine.js
+- Congigured openai.js w/ dangerouslyAllow : true so that browser avoid all the warnings regarding sensitive data.
+- Prepared our gptQuery prompt to get efficient results.
+- Integrated TMDB search engine to our gpt search engine.
+- Learnt about Promise.all
+- Stored our tmdb movie reulst in Redux store.
 
 
 # Features
+
 - Login Page
-    - Sign in/Sign  up Page
-    - Redirect to browse page
+  - Sign in/Sign up Page
+  - Redirect to browse page
