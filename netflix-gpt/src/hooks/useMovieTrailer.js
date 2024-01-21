@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addMovieTrailer } from "../utils/moviesSlice";
 import { API_options } from "../utils/constants";
 
 const useMovieTrailer = (movieID) => {
   const dispatch = useDispatch();
+  const trailerVDO = useSelector((store)=>store.movie.trailerVideo);
   const getMovieTrailer = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/" + movieID + "/videos?language=en-US",
@@ -19,7 +20,7 @@ const useMovieTrailer = (movieID) => {
   };
 
   useEffect(() => {
-    getMovieTrailer();
+    !trailerVDO && getMovieTrailer();
   }, []);
 };
 

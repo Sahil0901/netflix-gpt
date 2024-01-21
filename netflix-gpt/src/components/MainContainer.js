@@ -2,10 +2,11 @@ import React from "react";
 import VideoTitle from "./VideoTitle";
 import { useSelector } from "react-redux";
 import VideoBackground from "./VideoBackground";
+import Shimmer from "../utils/Shimmer";
 
 const MainContainer = () => {
   const movies = useSelector((store) => store.movie?.nowPlayingMovies);
-  if (!movies) return null;
+  if (!movies) return;
 
   const mainMovie = movies[0];
   // console.log(mainMovie);
@@ -15,7 +16,7 @@ const MainContainer = () => {
   return (
     <div>
       <VideoTitle title={original_title} overview={overview} />
-      <VideoBackground movieID = {id} />
+      <VideoBackground movieID={id} />
     </div>
   );
 };

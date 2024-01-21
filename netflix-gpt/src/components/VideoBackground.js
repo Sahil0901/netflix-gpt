@@ -4,8 +4,9 @@ import useMovieTrailer from "../hooks/useMovieTrailer";
 
 
 const VideoBackground = ({movieID}) => {
-  const trailerID = useSelector((store) => store.movie?.trailerVideo);
   useMovieTrailer(movieID);
+  const trailerID = useSelector((store) => store.movie?.trailerVideo);
+  // if(!trailerID) return null;
   return (
     <div className="w-screen ">
       <iframe

@@ -14,7 +14,7 @@ const GptSearchEngine = () => {
       API_options
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     return json.results;
   };
 
@@ -37,16 +37,16 @@ const GptSearchEngine = () => {
 
     console.log(tmdbResults);
     dispatch(addGptMovies({
-        movieName: gptMovies,
+        movieNames: gptMovies,
         movieResults: tmdbResults,
     }))
 
   };
 
   return (
-    <div className=" pt-[5%] flex justify-center">
+    <div className="pt-[35%] md:pt-[8%] flex justify-center">
       <form
-        className="bg-black w-1/2 grid grid-cols-12"
+        className="bg-black w-full md:w-1/2 grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
