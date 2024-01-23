@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { Netflix_Bkg, User_Icon } from "../utils/constants";
 
+
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -86,10 +87,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src={Netflix_Bkg}
-          alt="logo"
-        />
+        <img src={Netflix_Bkg} alt="logo" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}

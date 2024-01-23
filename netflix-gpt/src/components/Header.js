@@ -5,7 +5,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import {  toggleGptSearch } from "../utils/GptSlice";
+import { toggleGptSearch } from "../utils/GptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -48,7 +48,11 @@ const Header = () => {
   };
   return (
     <div className="absolute px-4 py-2 bg-gradient-to-b from-black w-screen z-10 flex flex-col md:flex-row justify-center md:justify-between">
-      <img alt="logo" src={Netflix_Logo} className=" w-48 mx-auto md:mx-0 "></img>
+      <img
+        alt="logo"
+        src={Netflix_Logo}
+        className=" w-48 mx-auto md:mx-0 "
+      ></img>
       {userInfo && (
         <div className="flex">
           <div className="mx-2 p-2">

@@ -20,8 +20,9 @@ const useMovieTrailer = (movieID) => {
   };
 
   useEffect(() => {
-    !trailerVDO && getMovieTrailer();
+     getMovieTrailer();
   }, []);
 };
 
 export default useMovieTrailer;
+// !trailerVDO &&

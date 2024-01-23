@@ -2,7 +2,6 @@ import React from "react";
 import VideoTitle from "./VideoTitle";
 import { useSelector } from "react-redux";
 import VideoBackground from "./VideoBackground";
-import Shimmer from "../utils/Shimmer";
 
 const MainContainer = () => {
   const movies = useSelector((store) => store.movie?.nowPlayingMovies);

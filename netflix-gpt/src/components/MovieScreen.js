@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import useMovieTrailer from "../hooks/useMovieTrailer";
 
-const VideoBackground = ({ movieID }) => {
+const MovieScreen = ({ movieID }) => {
   useMovieTrailer(movieID);
   const trailerID = useSelector((store) => store.movie?.trailerVideo);
   // console.log(trailerID);
@@ -10,7 +10,8 @@ const VideoBackground = ({ movieID }) => {
   return (
     <div className="w-full ">
       <iframe
-        className="w-screen h-screen"
+        width="980"
+        height="640"
         src={
           "https://www.youtube.com/embed/" +
           trailerID?.key +
@@ -25,4 +26,4 @@ const VideoBackground = ({ movieID }) => {
   );
 };
 
-export default VideoBackground;
+export default MovieScreen;
